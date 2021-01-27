@@ -5,7 +5,9 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
+                <div class="btn btn-info">
                     <b>Data Desa</b> 
+                    </div>
                     <a href="{{route('desa.create')}}" class="btn btn-primary float-right">Tambah</a>
                 </div>
                 <div class="card-body">

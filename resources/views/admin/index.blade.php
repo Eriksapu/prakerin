@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    Ini halaman admin
+                    Ini halaman admin<br><br>
+                    Masuk halaman Provinsi <br><br><br>
+                    <a href="{{route('provinsi.index')}}" class="btn btn-primary float-left">klik disini</a>
                 </div>
             </div>
         </div>
