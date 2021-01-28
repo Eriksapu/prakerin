@@ -36,6 +36,10 @@ class ProvinsiController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'kode_provinsi' => 'required|unique:provinsis',
+            'nama_provinsi' => 'required',
+        ]);
         $provinsi = new Provinsi();
         $provinsi->kode_provinsi = $request->kode_provinsi;
         $provinsi->nama_provinsi = $request->nama_provinsi;
@@ -78,6 +82,10 @@ class ProvinsiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validated = $request->validate([
+            'kode_provinsi' => 'required|unique:provinsis',
+            'nama_provinsi' => 'required',
+        ]);
         $provinsi = Provinsi::findOrFail($id);
         $provinsi->kode_provinsi = $request->kode_provinsi;
         $provinsi->nama_provinsi = $request->nama_provinsi;

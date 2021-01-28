@@ -10,6 +10,15 @@
                     <div class="card-body">
                         <form action="{{route('desa.store')}}" method="post">
                             @csrf
+                            @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                             <div class="form-group">
                                 <label for="">Pilih Kecamatan</label>
                                 <select name="id_kecamatan" class="form-control">

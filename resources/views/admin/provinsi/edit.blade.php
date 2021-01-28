@@ -11,6 +11,15 @@
                         <form action="{{route('provinsi.update', $provinsi->id)}}" method="post">
                             @method('put')
                             @csrf
+                            @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                             <div class="form-group">
                                 <label for="">Kode Provinsi</label>
                                 <input type="text" name="kode_provinsi" value="{{$provinsi->kode_provinsi}}" class="form-control" required>

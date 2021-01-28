@@ -11,6 +11,15 @@
                         <form action="{{route('desa.update', $desa->id)}}" method="post">
                             @method('put')
                             @csrf
+                            @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                             <div class="form-group">
                                 <label for="">Pilih Kecamatan</label>
                                 <select name="id_kecamatan" class="form-control">

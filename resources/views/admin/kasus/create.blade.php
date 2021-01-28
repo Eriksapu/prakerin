@@ -10,6 +10,15 @@
                     <div class="card-body">
                         <form action="{{route('kasus.store')}}" method="post">
                             @csrf
+                            @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
                             <div class="form-group">
                                 <label for="">Pilih RW</label>
                                 <select name="id_rw" class="form-control">
