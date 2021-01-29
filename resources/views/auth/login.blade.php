@@ -23,7 +23,7 @@
           <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
               <h1 class="text-white">Selamat Datang!</h1>
-              <p class="text-lead text-white">Update Seputar Covid 19.</p>
+              <p class="text-lead text-white">〖Update Seputar Covid 19〗</p>
             </div>
           </div>
         </div>

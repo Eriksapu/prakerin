@@ -15,8 +15,8 @@
                     @endif
 
                     Ini halaman admin<br><br>
-                    Masuk halaman Provinsi <br><br><br>
-                    <a href="{{route('provinsi.index')}}" class="btn btn-primary float-left">klik disini</a>
+                    Masuk halaman Provinsi<hr>
+                    <a href="{{route('provinsi.index')}}" class="btn btn-primary center">klik disini</a>
                 </div>
             </div>
         </div>

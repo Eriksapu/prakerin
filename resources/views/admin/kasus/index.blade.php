@@ -39,8 +39,8 @@
                                     <form action="{{route('kasus.destroy', $data->id)}}" method="post">
                                         @csrf
                                         @method('Delete')
-                                        <a class="btn btn-warning" href=" {{ route('kasus.show', $data->id) }}">Show</a>|
-                                        <a class="btn btn-info" href=" {{ route('kasus.edit', $data->id) }}">Edit</a>|
+                                        <a class="btn btn-warning" href=" {{ route('kasus.show', $data->id) }}">Show</a>⁞
+                                        <a class="btn btn-info" href=" {{ route('kasus.edit', $data->id) }}">Edit</a>⁞
                                         <button type="submit" class="btn btn-danger">Delete</button>
                                     </form>
                                 </td>

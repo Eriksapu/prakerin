@@ -29,8 +29,8 @@
                                     <form action="{{route('rw.destroy', $data->id)}}" method="post">
                                         @csrf
                                         @method('Delete')
-                                        <a class="btn btn-primary" href=" {{ route('rw.edit', $data->id) }} ">Edit</a>
-                                        <a class="btn btn-warning" href=" {{ route('rw.show', $data->id) }} ">Show</a>
+                                        <a class="btn btn-primary" href=" {{ route('rw.edit', $data->id) }} ">Edit</a> ⁞
+                                        <a class="btn btn-warning" href=" {{ route('rw.show', $data->id) }} ">Show</a> ⁞
                                         <button type="submit" class="btn btn-danger" >Delete</button>
                                     </form>
                                 </td>

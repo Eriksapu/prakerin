@@ -13,45 +13,39 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="test">
+              <a class="nav-link active" href="">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="provinsi">
-              <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Provinsi</span>
+                <span class="nav-link-text">➤ • ♛ Provinsi</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kota">
-              <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Kota</span>
+              <a class="nav-link" href="{{route('kota">
+                <span class="nav-link-text">➤ • ♛ Kota</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kecamatan">
-              <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Kecamatan</span>
+              <a class="nav-link" href="{{route('kecamatan">
+                <span class="nav-link-text">➤ • ♛ Kecamatan</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="desa">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Desa</span>
+              <a class="nav-link" href="{{route('desa">
+                <span class="nav-link-text">➤ • ♛ Desa</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="rw">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">RW</span>
+              <a class="nav-link" href="{{route('rw">
+                <span class="nav-link-text">➤ • ♛ RW</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kasus">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Kasus</span>
+              <a class="nav-link" href="{{route('kasus">
+                <span class="nav-link-text">➤ • ♛ Kasus</span>
               </a>
             </li>
           </ul>
