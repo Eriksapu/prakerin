@@ -24,27 +24,27 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('kota">
+              <a class="nav-link" href="kota">
                 <span class="nav-link-text">➤ • ♛ Kota</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('kecamatan">
+              <a class="nav-link" href="kecamatan">
                 <span class="nav-link-text">➤ • ♛ Kecamatan</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('desa">
+              <a class="nav-link" href="desa">
                 <span class="nav-link-text">➤ • ♛ Desa</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('rw">
+              <a class="nav-link" href="rw">
                 <span class="nav-link-text">➤ • ♛ RW</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('kasus">
+              <a class="nav-link" href="kasus">
                 <span class="nav-link-text">➤ • ♛ Kasus</span>
               </a>
             </li>

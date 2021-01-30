@@ -1,60 +1,49 @@
 @extends('layouts.master')
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">
-                        Tambah Data Kasus
-                    </div>
-                    <div class="card-body">
-                        <form action="{{route('kasus.store')}}" method="post">
-                            @csrf
-                            @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-                            <div class="form-group">
-                                <label for="">Pilih RW</label>
-                                <select name="id_rw" class="form-control">
-                                    @foreach($rw as $data)
-                                    <option value="{{$data->id}}">{{$data->nama_rw}}</option>
-                                    @endforeach
-                                </select>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    Data kasus
+                </div>
+                <div class="card-body">
+                    <form action="{{route('kasus.store')}}" method="post">
+                        @csrf
+                        <div class="row">
+                            <div class="col">
+                                @livewire('dropdowns')
                             </div>
-                            <div class="form-group">
-                                <label for="">Kasus Reaktif</label>
-                                <input type="number" name="reaktif" class="form-control" required>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="">Reaktif</label>
+                                    <input type="number" name="reaktif" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">positif</label>
+                                    <input type="number" name="positif" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">sembuh</label>
+                                    <input type="number" name="sembuh" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">meninggal</label>
+                                    <input type="number" name="meninggal" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">tanggal</label>
+                                    <input type="date" name="tanggal" class="form-control" required>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="">Kasus Positif</label>
-                                <input type="number" name="positif" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Kasus Meninggal</label>
-                                <input type="number" name="meninggal" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Kasus Sembuh</label>
-                                <input type="number" name="sembuh" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Tanggal</label>
-                                <input type="date" name="tanggal" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn block">Simpan</button>
-                                <a href=" {{ route('kasus.index') }} " class="btn btn-danger">Back</a>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-outline-primary ">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 @endsection

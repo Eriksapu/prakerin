@@ -7,7 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kasus extends Model
 {
-    public function Rw(){
-        return $this->belongsTo('App\Models\Rw','id_rw');
+    use HasFactory;
+    protected $fillable = ['id_rw', 'positif', 'meninggal', 'sembuh','tanggal'];
+    public $timestamps = true;
+
+    public function rw()
+    {
+        return $this->belongsTo('App\Models\Rw', 'id_rw');
     }
+
 }

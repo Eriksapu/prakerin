@@ -1,47 +1,50 @@
 @extends('layouts.master')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                    @include('flash-message')
                 <div class="card-header">
-                <div class="btn btn-info">
-                    <b>Data Kasus</b> 
-                    </div>
-                    <a href="{{route('kasus.create')}}" class="btn btn-primary float-right">Tambah</a>
+                    Data kasus
+                    <a href="{{route('kasus.create')}}"
+                       class="btn btn-primary float-right">
+                        Tambah
+                    </a>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tr>
+                     <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                    <tr class="bg-info">
                                 <th>No</th>
                                 <th>Lokasi</th>
-                                <th>Reaktif</th>
-                                <th>Positif</th>
-                                <th>Meninggal</th>
-                                <th>Sembuh</th>
+                                <th>Jumlah Reaktif</th>
+                                <th>Jumlah Positif</th>
+                                <th>Jumlah Sembuh</th>
+                                <th>Jumlah Meninggal</th>
                                 <th>Tanggal</th>
                                 <th>Aksi</th>
                             </tr>
+                            </thead>
                             @php $no=1; @endphp
                             @foreach($kasus as $data)
                             <tr>
                                 <td>{{$no++}}</td>
-                                <td>Rw {{$data->rw->nama_rw}}</td>
-                                <td>{{$data->reaktif}} Orang</td>
-                                <td>{{$data->positif}} Orang</td>
-                                <td>{{$data->meninggal}} Orang</td>
-                                <td>{{$data->sembuh}} Orang</td>
-                                <td>{{$data->tanggal}}</td>                                
                                 <td>
-                                    <form action="{{route('kasus.destroy', $data->id)}}" method="post">
-                                        @csrf
-                                        @method('Delete')
-                                        <a class="btn btn-warning" href=" {{ route('kasus.show', $data->id) }}">Show</a>⁞
-                                        <a class="btn btn-info" href=" {{ route('kasus.edit', $data->id) }}">Edit</a>⁞
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    RW <b>{{$data->rw->nama_rw}}</b>, {{$data->rw->desa->nama_desa}}<br>
+                                    {{$data->rw->desa->kecamatan->nama_kecamatan}}<br> {{$data->rw->desa->kecamatan->kota->nama_kota}},
+                                    {{$data->rw->desa->kecamatan->kota->provinsi->nama_provinsi}}
+                                </td>
+                                <td>{{$data->reaktif}}</td>
+                                <td>{{$data->positif}}</td>
+                                <td>{{$data->sembuh}}</td>
+                                <td>{{$data->meninggal}}</td>
+                                <td>{{$data->tanggal}}</td>
+                                <td>
+                                    <form action="{{route('kasus.destroy',$data->id)}}" method="post">
+                                        @csrf @method('delete')
+                                        <a href="{{route('kasus.edit',$data->id)}}" class="btn btn-success btn-sm">Edit</a>
+                                        <a href="{{route('kasus.show',$data->id)}}" class="btn btn-warning btn-sm">Show</a>
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('apakah anda yakin ?')">Delete</button>
                                     </form>
                                 </td>
                             </tr>

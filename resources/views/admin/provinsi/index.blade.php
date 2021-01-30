@@ -11,14 +11,15 @@
                     <a href="{{route('provinsi.create')}}" class="btn btn-primary float-right">Tambah</a>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tr>
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                     <tr class="bg-info">
                                 <th>No</th>
                                 <th>Kode Provinsi</th>
                                 <th>Provinsi</th>
                                 <th>Aksi</th>
                             </tr>
+                            </thead>
                             @php $no=1; @endphp
                             @foreach($provinsi as $data)
                             <tr>
