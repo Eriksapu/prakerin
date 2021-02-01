@@ -5,12 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Desa extends Model
+class desa extends Model
 {
-    public function Rw(){
-        return $this->hasMany('App\Models\Rw','id_desa');
-    }
-    public function Kecamatan(){
+    use HasFactory;
+
+    protected $fillable = ['nama_desa','id_kecamatan'];
+    public $timestamps = true;
+
+    public function kecamatan()
+    {
         return $this->belongsTo('App\Models\Kecamatan','id_kecamatan');
+    }
+
+    public function rw()
+    {
+        return $this->hasMany('App\Models\Rw','id_desa');
     }
 }

@@ -20,19 +20,19 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="">Reaktif</label>
-                                    <input type="text" name="reaktif" class="form-control" value="{{$kasus->reaktif}}" required>
+                                    <input type="number" name="reaktif" class="form-control" value="{{$kasus->reaktif}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">positif</label>
-                                    <input type="text" name="positif" class="form-control" value="{{$kasus->positif}}" required>
+                                    <input type="number" name="positif" class="form-control" value="{{$kasus->positif}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">sembuh</label>
-                                    <input type="text" name="sembuh" class="form-control" value="{{$kasus->sembuh}}" required>
+                                    <input type="number" name="sembuh" class="form-control" value="{{$kasus->sembuh}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">meninggal</label>
-                                    <input type="text" name="meninggal" class="form-control" value="{{$kasus->meninggal}}" required>
+                                    <input type="number" name="meninggal" class="form-control" value="{{$kasus->meninggal}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">tanggal</label>
@@ -50,4 +50,3 @@
     </div>
 </div>
 @endsection
-

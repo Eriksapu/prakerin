@@ -11,15 +11,16 @@
                     <a href="{{route('kota.create')}}" class="btn btn-primary float-right">Tambah</a>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tr>
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                     <tr class="bg-info">
                                 <th>No</th>
                                 <th>Kode Kota</th>
                                 <th>Kota</th>
                                 <th>Provinsi</th>
                                 <th>Aksi</th>
                             </tr>
+                            </thead>
                             @php $no=1; @endphp
                             @foreach($kota as $data)
                             <tr>

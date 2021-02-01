@@ -45,7 +45,7 @@ class Dropdowns extends Component
                 $this->SelectedProvinsi = $rw->desa->kecamatan->kota->id_provinsi;
                 $this->SelectedKota = $rw->desa->kecamatan->id_kota;
                 $this->SelectedKecamatan = $rw->desa->id_kecamatan;
-                $this->SelectedDesa = $rw->id_desa;
+                $this->Selecteddesa = $rw->id_desa;
             }
         }
 

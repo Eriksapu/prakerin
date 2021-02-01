@@ -34,7 +34,7 @@
         <div class="form-group">
         <label class="">Desa</label>
         <select name="" wire:model="selectedDesa" class="form-control">
-            <option value=''>Pilih Desa</option>
+            <option value=''>Pilih <div>Desa</div></option>
             @foreach($desas as $desa)
                 <option value={{ $desa->id }}>{{ $desa->nama_desa }}</option>
             @endforeach

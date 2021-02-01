@@ -10,7 +10,7 @@ class KasusController extends Controller
 {
     public function index()
     {
-        $kasus = Kasus::with('rw.kelurahan.kecamatan.kota.provinsi')->orderBy('id','DESC')->get();
+        $kasus = Kasus::with('rw.desa.kecamatan.kota.provinsi')->orderBy('id','DESC')->get();
         // dd($kasus);
         return view('admin.kasus.index',compact('kasus'));
     }

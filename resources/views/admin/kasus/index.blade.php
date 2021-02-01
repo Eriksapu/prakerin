@@ -12,9 +12,9 @@
                     </a>
                 </div>
                 <div class="card-body">
-                     <table id="example1" class="table table-bordered table-striped">
+                <table id="example1" class="table table-bordered table-striped">
                     <thead>
-                    <tr class="bg-info">
+                     <tr class="bg-info">
                                 <th>No</th>
                                 <th>Lokasi</th>
                                 <th>Jumlah Reaktif</th>
@@ -42,9 +42,9 @@
                                 <td>
                                     <form action="{{route('kasus.destroy',$data->id)}}" method="post">
                                         @csrf @method('delete')
-                                        <a href="{{route('kasus.edit',$data->id)}}" class="btn btn-success btn-sm">Edit</a>
+                                        <a href="{{route('kasus.edit',$data->id)}}" class="btn btn-primary btn-sm">Edit</a>
                                         <a href="{{route('kasus.show',$data->id)}}" class="btn btn-warning btn-sm">Show</a>
-                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('apakah anda yakin ?')">Delete</button>
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Ga Akan Nyesel Di Hapus ?')">Delete</button>
                                     </form>
                                 </td>
                             </tr>

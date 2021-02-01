@@ -7,10 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rw extends Model
 {
-    public function Kasus(){
-        return $this->hasMany('App\Models\Kasus','id_rw');
-    }
-    public function Desa(){
+    use HasFactory;
+
+    protected $fillable = ['nama_rw','id_desa'];
+    public $timestamps = true;
+
+    public function desa()
+    {
         return $this->belongsTo('App\Models\Desa','id_desa');
+    }
+
+    public function kasus()
+    {
+        return $this->hasMany('App/Models/Kasus','id_rw');
     }
 }

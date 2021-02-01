@@ -11,14 +11,15 @@
                     <a href="{{route('rw.create')}}" class="btn btn-primary float-right">Tambah</a>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tr>
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                     <tr class="bg-info">
                                 <th>No</th>
                                 <th>No Rw</th>
                                 <th>Nama Desa</th>
                                 <th>Aksi</th>
                             </tr>
+                            </thead>
                             @php $no=1; @endphp
                             @foreach($rw as $data)
                             <tr>
