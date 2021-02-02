@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Post;
 
 class PostsController extends Controller
 {
@@ -81,7 +81,7 @@ class PostsController extends Controller
         }
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         //validate data
         $validator = Validator::make($request->all(), [
@@ -104,11 +104,10 @@ class PostsController extends Controller
 
         } else {
 
-            $post = Post::whereId($request->input('id'))->update([
-                'title'     => $request->input('title'),
-                'content'   => $request->input('content'),
-            ]);
-
+            $post = Post::findOrFail($id);
+            $post->title = $request->title;
+            $post->content = $request->content;
+            $post->save();
 
             if ($post) {
                 return response()->json([
@@ -128,19 +127,19 @@ class PostsController extends Controller
 
     public function destroy($id)
     {
-        $post = Posts::whereId($id)->first();
+        $post = Post::findOrFail($id);
+        $post->delete();
+
         if ($post) {
-            $post->delete();
-            return response()->json({
+            return response()->json([
                 'success' => true,
-                'massage' => 'Posts berhasil dihapus',
-            },200);
-        }else{
-            return response()->json({
+                'message' => 'Post Berhasil Dihapus!',
+            ], 200);
+        } else {
+            return response()->json([
                 'success' => false,
-                'massage' => 'Posts tidak ditemukan',
-                'data' => ''
-            },404);
+                'message' => 'Post Gagal Dihapus!',
+            ], 500);
         }
 
     }

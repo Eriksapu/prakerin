@@ -12,7 +12,7 @@
                         @csrf @method('put')
                         <div class="row">
                             <div class="col">
-                                @livewire('dropdowns',['selectedRw'=>$kasus->id_rw,'selectedDesa'=>$kasus->rw->id_desa,
+                                @livewire('livewire',['selectedRw'=>$kasus->id_rw,'selectedDesa'=>$kasus->rw->id_desa,
                                             'selectedKecamatan'=>$kasus->rw->desa->id_kecamatan,
                                             'selectedKota'=>$kasus->rw->desa->kecamatan->id_kota,
                                             'selectedProvinsi'=>$kasus->rw->desa->kecamatan->kota->id_provinsi])

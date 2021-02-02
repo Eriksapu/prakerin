@@ -19,32 +19,32 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="provinsi">
+            <a href="{{ url('/admin/provinsi') }}">
                 <span class="nav-link-text">➤ • ♛ Provinsi</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kota">
-                <span class="nav-link-text">➤ • ♛ Kota</span>
+            <a href="{{ url('/admin/kota') }}">              
+              <span class="nav-link-text">➤ • ♛ Kota</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kecamatan">
+            <a href="{{ url('/admin/kecamatan') }}">
                 <span class="nav-link-text">➤ • ♛ Kecamatan</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="desa">
+            <a href="{{ url('/admin/desa') }}">
                 <span class="nav-link-text">➤ • ♛ Desa</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="rw">
+            <a href="{{ url('/admin/rw') }}">
                 <span class="nav-link-text">➤ • ♛ RW</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kasus">
+            <a href="{{ url('/admin/kasus') }}">
                 <span class="nav-link-text">➤ • ♛ Kasus</span>
               </a>
             </li>

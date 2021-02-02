@@ -14,11 +14,8 @@ class CreateDesasTable extends Migration
     public function up()
     {
         Schema::create('desas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->unsignedInteger('id_kecamatan');
-            $table->foreign('id_kecamatan')
-            ->references('id')
-            ->on('kecamatans')->onDelete('cascade');
             $table->string('nama_desa');
             $table->timestamps();
         });
@@ -31,6 +28,6 @@ class CreateDesasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('desas');
+        Schema::dropIfExists('kelurahans');
     }
 }

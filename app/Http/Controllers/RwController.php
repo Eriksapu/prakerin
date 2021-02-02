@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Rw;
 use App\Models\Desa;
-use App\Models\Kecamatan;
-use App\Models\Kota;
-use App\Models\Provinsi;
 use Illuminate\Http\Request;
 
 class RwController extends Controller
@@ -41,13 +38,13 @@ class RwController extends Controller
      */
     public function store(Request $request)
     {
+
         $rw = new Rw();
         $rw->id_desa = $request->id_desa;
         $rw->nama_rw = $request->nama_rw;
         $rw->save();
         return redirect()->route('rw.index')
-            ->with(['success'=>'Data <b>', $rw->nama_rw, 
-            '</b> Berhasil di input']);
+            ->with(['success'=>'Data Berhasil di input']);
     }
 
     /**
@@ -57,7 +54,7 @@ class RwController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
+    {
         $rw = Rw::findOrFail($id);
         return view('admin.rw.show', compact('rw'));
     }
@@ -84,13 +81,13 @@ class RwController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $rw = Rw::findOrFail($id);
         $rw->id_desa = $request->id_desa;
         $rw->nama_rw = $request->nama_rw;
         $rw->save();
         return redirect()->route('rw.index')
-            ->with(['success'=>'Data <b>', $rw->nama_rw, 
-            '</b> Berhasil di edit']);
+            ->with(['info'=>'Data Berhasil di Edit!']);
     }
 
     /**
@@ -104,7 +101,6 @@ class RwController extends Controller
         $rw = Rw::findOrFail($id);
         $rw->delete();
         return redirect()->route('rw.index')
-            ->with(['success'=>'Data <b>', $rw->nama_rw, 
-            '</b> Berhasil di hapus']);
+            ->with(['error'=>'Data Berhasil di Hapus!']);
     }
 }
