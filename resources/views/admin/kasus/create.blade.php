@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-body">
                         <form action="{{route('kasus.store')}}" method="post">
-                        @csrf
+                        @csrf @method('post')
                             <div class="row">
                                 <div class="col">
                                     @livewire('livewire')
