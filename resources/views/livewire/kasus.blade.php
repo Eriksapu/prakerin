@@ -43,7 +43,6 @@
     {{-- @endif --}}
         </div>
         <div class="form-group">
-        {{-- @endif --}}
     {{-- @if (!is_null($selectedDesa) > 0) --}}
             <label for="rw" >RW</label>
                 <select wire:model="selectedRw" class="form-control" name="id_rw">

@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-body">
                         <form action="{{route('kasus.store')}}" method="post">
-                        @csrf 
+                        @csrf
                             <div class="row">
                                 <div class="col">
                                     @livewire('livewire')
@@ -17,19 +17,19 @@
                                 <div class="col">
                                     <div class="form-group">                                        
                                         <label for="">Reaktif</label>
-                                        <input type="number" name="reaktif" class="form-control" required>
+                                        <input type="text" name="reaktif" class="form-control" required>
                                     </div> 
                                     <div class="form-group">
                                         <label for="">Positif</label>
-                                        <input type="number" name="positif" class="form-control" required>
+                                        <input type="text" name="positif" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="">Sembuh</label>
-                                        <input type="number" name="sembuh" class="form-control" required>
+                                        <input type="text" name="sembuh" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="">Meninggal</label>
-                                        <input type="number" name="meninggal" class="form-control" required>
+                                        <input type="text" name="meninggal" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="">Tanggal</label>
