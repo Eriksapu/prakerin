@@ -13,7 +13,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="">
+              <a class="nav-link active" href="/home">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
@@ -48,6 +48,12 @@
                 <span class="nav-link-text">➤ • ♛ Kasus</span>
               </a>
             </li>
+             <li class="nav-item">
+                 <a href="{{ url('/') }}">
+                     <span class="nav-link-text">➤ • ♛ Frontend</span>
+                 </a>
+             </li>
+
           </ul>
         </div>
       </div>

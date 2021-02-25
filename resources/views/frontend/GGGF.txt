@@ -1,0 +1,134 @@
+<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card bg-danger img-card box-primary-shadow">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="text-white">
+												<p class="text-white mb-0">TOTAL POSITIF</p>
+												<h2 class="mb-0 number-font">108,812,222</h2>
+												<p class="text-white mb-0">ORANG</p>
+											</div>
+											<div class="ml-auto"> <img src="../uploads/sad-u6e.png" width="50" height="50" alt="Positif"> </div>
+										</div>
+									</div>
+								</div>
+							</div><!-- COL END -->
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card bg-success img-card box-secondary-shadow">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="text-white">
+												<p class="text-white mb-0">TOTAL SEMBUH</p>
+												<h2 class="mb-0 number-font">61,061,516</h2>
+												<p class="text-white mb-0">ORANG</p>
+											</div>
+											<div class="ml-auto"> <img src="../uploads/happy-ipM.png" width="50" height="50" alt="Positif"> </div>
+										</div>
+									</div>
+								</div>
+							</div><!-- COL END -->
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card  bg-secondary img-card box-success-shadow">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="text-white">
+												<p class="text-white mb-0">TOTAL MENINGGAL</p>
+												<h2 class="mb-0 number-font">2,399,793</h2>
+												<p class="text-white mb-0">ORANG</p>
+											</div>
+											<div class="ml-auto"> <img src="../uploads/emoji-LWx.png" width="50" height="50" alt="Positif"> </div>
+										</div>
+									</div>
+								</div>
+							</div><!-- COL END -->
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+								<div class="card  bg-orange img-card box-success-shadow">
+									<div class="card-body">
+										<div class="d-flex">
+											<div class="text-white">
+												<h2 class="mb-0 number-font">INDONESIA</h2>
+												   
+												<p class="text-white mb-0"><b>1,217,468</b> POSITIF, <b>1,025,273</b> SEMBUH, <b>33,183</b> MENINGGAL</p>
+											</div>
+											
+											<div class="ml-auto"> <img src="../uploads/indonesia-PZq.png" width="50" height="50" alt="Positif"> </div>
+										</div>
+									</div>
+								</div>
+							</div><!-- COL END -->
+							<div class="col text-center"><p>Update terakhir : 15  Februari 2021 13:54:34 WIB</p></div>
+						</div>
+                        ////
+                         <div class="row">
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-3">
+                    <div class="card bg-warning img-card box-primary-shadow">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <p class="text-black mb-0">TOTAL POSITIF</p>
+                                    <p class="text-white mb-0">{{ $positif }}</p>
+                                    <p class="text-white mb-0">ORANG</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <img src="{{asset('assets/assetfrontend/assets/img/sad.png')}}" alt="Positif" width="50" height="50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-3">
+                    <div class="card bg-primary img-card box-secondary-shadow">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <p class="text-white mb-0">TOTAL SEMBUH</p>
+                                    <p class="text-white mb-0">{{ $sembuh }}</p>
+                                    <p class="text-white mb-0">ORANG</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <img src="{{asset('assets/assetfrontend/assets/img/happy.png')}}" alt="Positif" width="50" height="50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-3">
+                    <div class="card bg-danger img-card box-success-shadow">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <p class="text-white mb-0">TOTAL MENINGGAL</p>
+                                    <p class="text-white mb-0">{{ $meninggal }}</p>
+                                    <p class="text-white mb-0">ORANG</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <img src="{{asset('assets/assetfrontend/assets/img/cry.png')}}" alt="Positif" width="50" height="50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-3">
+                    <div class="card bg-success img-card box-success-shadow">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <p class="text-white mb-0">INDONESIA</p>
+                                    <p class="text-white mb-0">
+                                       <p class="text-white mb-0"> &nbsp; POSITIF &nbsp;{{$positif}}&nbsp; Orang, &nbsp;</p>
+                                       <hr>
+                                       <p class="text-white mb-0"> &nbsp; SEMBUH &nbsp;{{$sembuh}}&nbsp; Orang, &nbsp;</p>
+                                       <hr>
+                                      <p class="text-white mb-0"> &nbsp; MENINGGAL &nbsp;{{$meninggal}}&nbsp; Orang, &nbsp;</p>
+
+                                    </p>
+                                </div>
+
+                                <div class="ml-auto">
+                                    <img src="{{asset('assets/assetfrontend/assets/img/indo.png')}}" alt="Positif" width="50" height="50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

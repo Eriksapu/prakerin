@@ -7,6 +7,7 @@ use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\DesaController;
 use App\Http\Controllers\RwController;
 use App\Http\Controllers\KasusController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ use App\Http\Controllers\KasusController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,3 +41,5 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth']], function() {
         Route::resource('rw', RwController::class);
         Route::resource('kasus', KasusController::class);
  } );
+ //fronend corona
+ Route::resource('/', FrontendController::class);
