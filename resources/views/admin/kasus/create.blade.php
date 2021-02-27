@@ -1,20 +1,16 @@
 @extends('layouts.master')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-12">
             <div class="card">
-                <div class="card-header">
-                    Tambah Data Kasus
-                </div>
                 <div class="card-body">
-                    <form action="{{route('kasus.store')}}" method="post">
+                    <form action="{{route('kasus.store')}}" class="form-horizontal m-t-30" method="POST">
                         @csrf
-                        <div class="row">
-                            <div class="col">
-                                @livewire('livewire')
-                            </div>
-                        </div>
+                        @livewireScripts
+                        @livewire('livewire')
+                        @livewireStyles
                         <div class="col">
                             <div class="form-group">
                                 <label for="">Jumlah Reaktif</label>
@@ -48,3 +44,4 @@
     </div>
 </div>
 @endsection
+

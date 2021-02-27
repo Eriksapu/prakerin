@@ -60,6 +60,7 @@ class ApiController extends Controller
                 'rws.id', '=', 'kasuses.id_rw')->sum('kasuses.sembuh');
 
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => 'Data Kasus Indonesia',
                     'Jumlah Reaktif' => $reaktif,
@@ -67,6 +68,7 @@ class ApiController extends Controller
                     'Jumlah Meninggal' => $meninggal,
                     'Jumlah Sembuh' => $sembuh,
                     'message' => 'Data Kasus Di Tampilkan'
+                ],
                 ];
                 return response()->json($res,200);
     }
@@ -95,12 +97,14 @@ class ApiController extends Controller
             'meninggal' =>$meninggal,
         ];
         $arr = [
+            [
             'status' => 200,
             'data' => [
                 'Hari Ini' => $arr2,
                 'total' => $arr1
             ],
             'message' => 'Berhasil'
+        ],
         ];
         
         return response()->json($arr, 200);
@@ -124,9 +128,11 @@ class ApiController extends Controller
         ->groupBy('nama_provinsi')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -148,9 +154,11 @@ class ApiController extends Controller
         ->groupBy('nama_provinsi')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -171,9 +179,11 @@ class ApiController extends Controller
         ->groupBy('nama_kota')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -193,9 +203,11 @@ class ApiController extends Controller
         ->groupBy('nama_kota')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -216,9 +228,11 @@ class ApiController extends Controller
         ->groupBy('nama_kecamatan')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -237,9 +251,11 @@ class ApiController extends Controller
         ->groupBy('nama_kecamatan')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -259,9 +275,11 @@ class ApiController extends Controller
         ->groupBy('nama_desa')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -279,9 +297,11 @@ class ApiController extends Controller
         ->groupBy('nama_desa')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -299,9 +319,11 @@ class ApiController extends Controller
         ->groupBy('nama_rw')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }
@@ -319,9 +341,11 @@ class ApiController extends Controller
         ->groupBy('nama_rw')
         ->get();
                 $res = [
+                    [
                     'succsess' => true,
                     'Data' => $data,
                     'message' => 'Data Kasus Di Tampilkan'
+                    ],
                 ];
                 return response()->json($res,200);
     }

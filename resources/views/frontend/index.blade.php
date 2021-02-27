@@ -136,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            {{-- <br><br>
             <hr>
             <a>
                 <center>
@@ -160,7 +160,7 @@
             </div>
             @endif
             <hr>
-            <br>
+            <br> --}}
             <div class="row row-cards">
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-14">
                     <div class="card">
