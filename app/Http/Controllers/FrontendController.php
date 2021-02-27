@@ -37,8 +37,8 @@ class FrontendController extends Controller
                         ->join('kasuses', 'rws.id', '=', 'kasuses.id_rw')
                         ->groupBy('provinsis.id')
                         ->get();
-                         $datadunia = file_get_contents("https://api.kawalcorona.com/");
-                         $dunia = json_decode($datadunia, true);
+                        //  $datadunia = file_get_contents("https://api.kawalcorona.com/");
+                        //  $dunia = json_decode($datadunia, true);
         return view('frontend.index', compact('provinsi', 'data' ,'positif','sembuh','meninggal'));
     }
      public function kota()

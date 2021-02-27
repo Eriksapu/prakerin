@@ -21,7 +21,7 @@
 
 
 <body>
-    <?php 
+    {{-- <?php 
     
     $dataid = file_get_contents("https://api.kawalcorona.com/indonesia");
     $id = json_decode($dataid, true);
@@ -29,7 +29,7 @@
     $idprovinsi = json_decode($dataidprovinsi, true);
     $datadunia = file_get_contents("https://api.kawalcorona.com/");
     $dunia = json_decode($datadunia, true);
-    ?>
+    ?> --}}
 
 
     <!-- Header -->
@@ -229,13 +229,13 @@
                                         <?php
                                         for ($i = 0; $i <= 191; $i++){
                                     ?>
-                                        <tr>
+                                        {{-- <tr>
                                             <td> <?php echo $i+1 ?></td>
                                             <td> <?php echo $dunia[$i]['attributes']['Country_Region'] ?></td>
                                             <td> <?php echo $dunia[$i]['attributes']['Confirmed'] ?></td>
                                             <td><?php echo $dunia[$i]['attributes']['Recovered']?></td>
                                             <td><?php echo $dunia[$i]['attributes']['Deaths']?></td>
-                                        </tr>
+                                        </tr> --}}
                                         <?php 
                       
                       } ?>
